@@ -84,6 +84,13 @@ const toolKits = {
             "url": "https://www.svgbackgrounds.com/",
             "img": "/img/sites/backgrounds/svgbackgrounds.png"
         },
+        {
+            "type": "BACKGROUNDS",
+            "name": "toptal",
+            "description": "Toptal is a marketplace for top remote design and development talent, connecting startups with the best designers and developers in the world.",
+            "url": "https://www.toptal.com/designers/subtlepatterns/",
+            "img": "/img/sites/backgrounds/toptal.png"
+        },
     ],
 
     "image-optimizers": [
@@ -122,6 +129,57 @@ const toolKits = {
             "url": "https://cleanup.pictures",
             "img": "/img/sites/image-optimizers/cleanuppictures.png"
         },
+        {
+            "type": "IMAGE OPTIMIZERS",
+            "name": "svgomg",
+            "description": "SVGOMG is a GUI for SVGO, a Node.js tool for optimizing SVG vector graphics files.",
+            "url": "https://jakearchibald.github.io/svgomg/",
+            "img": "/img/sites/image-optimizers/svgomg.png"
+        },
+        {
+            "type": "IMAGE OPTIMIZERS",
+            "name": "snapdrop",
+            "description": "Snapdrop is a progressive web app that allows you to share files from your phone, tablet or computer to any other device instantly.",
+            "url": "https://snapdrop.net/",
+            "img": "/img/sites/image-optimizers/snapdrop.png"
+        },
+    ],
+    "colors": [
+        {
+            "type": "COLORS",
+            "name": "tailwind-colors",
+            "description": "A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.",
+            "url": "https://tailwind-colors.meidev.co/",
+            "img": "/img/sites/colors/tailwind-colors.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "colorhunt",
+            "description": "Color Hunt is a free and open platform for color inspiration with thousands of trendy hand-picked color palettes.",
+            "url": "https://colorhunt.co/",
+            "img": "/img/sites/colors/colorhunt.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "coolors",
+            "description": "The super fast color schemes generator! Create, save and share perfect palettes in seconds!",
+            "url": "https://coolors.co/",
+            "img": "/img/sites/colors/coolors.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "hue.tools",
+            "description": "Hue.tools is a free tool to help you find the perfect color palette for your next project.",
+            "url": "https://hue.tools/",
+            "img": "/img/sites/colors/hue-tools.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "brandcolors",
+            "description": "Brand Colors is a free and open platform for sharing the colors of brands and logos.",
+            "url": "https://brandcolors.net/",
+            "img": "/img/sites/colors/brandcolors.png"
+        }
     ]
 }
 

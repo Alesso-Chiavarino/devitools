@@ -7,23 +7,23 @@ export const toolkit = [
   },
   {
     name: 'COLORS',
-    path: '/toolkit/color'
+    path: '/toolkit/colors'
   },
   {
     name: 'ANIMATIONS',
-    path: '/toolkit/animation'
+    path: '/toolkit/animations'
   },
   {
     name: 'EXTENSIONS',
-    path: '/toolkit/extension'
+    path: '/toolkit/extensions'
   },
   {
     name: 'FONTS',
-    path: '/toolkit/font'
+    path: '/toolkit/fonts'
   },
   {
     name: 'CSS FRAMEWORKS',
-    path: '/toolkit/framework'
+    path: '/toolkit/frameworks'
   },
   {
     name: 'IMAGE OPTIMIZERS',
@@ -31,11 +31,11 @@ export const toolkit = [
   },
   {
     name: 'COMPONENTS',
-    path: '/toolkit/component'
+    path: '/toolkit/components'
   },
   {
     name: 'DESIGN',
-    path: '/toolkit/design'
+    path: '/toolkit/designs'
   },
   {
     name: 'DESIGN',
@@ -57,7 +57,7 @@ const ToolsContainer = () => {
       <div className="bg-black min-h-screen h-fit">
         <div className="container mx-auto">
           <h2 className="text-transparent text-6xl font-extrabold text-center pt-10 bg-clip-text bg-gradient-to-r from-white to-slate-300">Front End Toolkit</h2>
-          <div className="grid grid-cols-4 gap-5 p-5 mt-10 bg-gradient-to-r from-violet-400 via-blue-400 to-blue-600 rounded-md">
+          <div className="grid grid-cols-4 gap-2 p-2 mt-10 bg-gradient-to-r from-violet-400 via-blue-400 to-blue-600 rounded-md">
             {toolkit.map((tool, i) => <Tool key={i} {...tool} />)}
           </div>
         </div>

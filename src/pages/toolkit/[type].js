@@ -32,7 +32,7 @@ const Tool = ({ data }) => {
                             </a>
                             <h3 className="text-xl font-bold">{site.name}</h3>
                             <p>{site.description}</p>
-                            <a href={site.url} target="_blank" rel="noreferrer" className="bg-violet-400 w-1/4 rounded-md text-center font-bold py-1 px-2">Learn More</a>
+                            <a href={site.url} target="_blank" rel="noreferrer" className="bg-violet-400 w-1/4 rounded-md text-center font-bold py-1 px-2 hover:bg-violet-500">Learn More</a>
                         </article>
                     ))}
                 </div>
@@ -51,7 +51,9 @@ export default Tool;
 export const getServerSideProps = async (context) => {
 
     const params = context.query.type;
-    const response = await fetch(`https://devitools.vercel.app/api/tools?type=${params}`)
+    // console.log(params)
+    const response = await fetch(`http://localhost:3000/api/tools?type=${params}`)
+    // const response = await fetch(`https://devitools.vercel.app/api/tools?type=${params}`)
     const data = await response.json()
 
     return {

@@ -1,0 +1,33 @@
+.tool {
+    h5 {
+
+        // background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        // animation: animate 2s infinite;
+        --tw-gradient-from: #a78bfa;
+        --tw-gradient-to: #2563eb;
+        --tw-gradient-stops: var(--tw-gradient-from), #60a5fa, var(--tw-gradient-to);
+    }
+
+    &:hover {
+        h5 {
+            background-clip: text;
+            background-size: 400%;
+            animation: animate 5s linear infinite;
+            filter: brightness(1.2);
+            font-size: 35px;
+            transition: all .3s;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #a78bfa, #9d86f8, #9381f7, #897cf5, #7d78f3, #7173f2, #646ff0, #546bee, #4167ed, #2563eb, #4167ed, #546bee, #646ff0, #7173f2, #7d78f3, #897cf5, #9381f7, #9d86f8);
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 400%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
