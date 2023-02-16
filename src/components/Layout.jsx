@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Aside from './Aside';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -11,13 +12,18 @@ const Layout = ({ title = 'DeviTools', children }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar/>
-            <section >
-                <main>
-                    {children}
-                </main>
-            </section>
-            <Footer/>
+            <div className='flex'>
+                <Aside />
+                <div className='w-full'>
+                    <Navbar />
+                    <section>
+                        <main>
+                            {children}
+                        </main>
+                    </section>
+                </div>
+            </div>
+            <Footer />
         </>
     )
 }

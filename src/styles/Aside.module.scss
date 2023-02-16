@@ -1,0 +1,13 @@
+.li {
+    cursor: pointer;
+
+    &:hover {
+        h3 {
+            color: #60A5FA;
+        }
+
+        div {
+            background-color: #60A5FA;
+        }
+    }
+}
