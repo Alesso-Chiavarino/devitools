@@ -34,18 +34,18 @@ export const toolkit = [
     path: '/toolkit/components'
   },
   {
-    name: 'DESIGN',
+    name: 'DESIGNS',
     path: '/toolkit/designs'
   },
   {
-    name: 'DESIGN',
-    path: '/toolkit/design'
+    name: 'DESIGNS',
+    path: '/toolkit/designs'
   }, {
-    name: 'DESIGN',
-    path: '/toolkit/design'
+    name: 'DESIGNS',
+    path: '/toolkit/designs'
   }, {
-    name: 'DESIGN',
-    path: '/toolkit/design'
+    name: 'DESIGNS',
+    path: '/toolkit/designs'
   },
 ]
 
