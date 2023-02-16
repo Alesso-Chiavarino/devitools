@@ -179,7 +179,35 @@ const toolKits = {
             "description": "Brand Colors is a free and open platform for sharing the colors of brands and logos.",
             "url": "https://brandcolors.net/",
             "img": "/img/sites/colors/brandcolors.png"
-        }
+        },
+        {
+            "type": "COLORS",
+            "name": "colorspace",
+            "description": "Colorspace is a free tool to help you find the perfect color palette for your next project.",
+            "url": "https://mycolor.space/",
+            "img": "/img/sites/colors/colorspace.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "webgradients",
+            "description": "A free collection of 180 linear gradients that you can use as content backdrops in any part of your website.",
+            "url": "https://webgradients.com/",
+            "img": "/img/sites/colors/webgradients.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "colorhub",
+            "description": "Browse our pre-made palettes or create your own, and plug it into your project in a matter of clicks",
+            "url": "https://www.colorhub.app",
+            "img": "/img/sites/colors/colorhub.png"
+        },
+        {
+            "type": "COLORS",
+            "name": "happyhues",
+            "description": "A handpicked collection of beautiful color palettes for your next design project.",
+            "url": "https://www.happyhues.co/",
+            "img": "/img/sites/colors/happyhues.png"
+        },
     ]
 }
 
