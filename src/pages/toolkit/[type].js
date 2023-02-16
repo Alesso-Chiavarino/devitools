@@ -51,7 +51,7 @@ export default Tool;
 export const getServerSideProps = async (context) => {
 
     const params = context.query.type;
-    const response = await fetch(`http://localhost:3000/api/tools?type=${params}`)
+    const response = await fetch(`https://devitools.vercel.app/api/tools?type=${params}`)
     const data = await response.json()
 
     return {
