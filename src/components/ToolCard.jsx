@@ -1,3 +1,5 @@
+import { HiArrowNarrowRight } from 'react-icons/hi'
+
 const ToolCard = ({ name, description, url, img }) => {
     return (
         <article className="border-2 border-violet-400 p-5 flex flex-col justify-between gap-5 rounded-md">
@@ -6,7 +8,7 @@ const ToolCard = ({ name, description, url, img }) => {
             </a>
             <h3 className="text-xl font-bold">{name}</h3>
             <p>{description}</p>
-            <a href={url} target="_blank" rel="noreferrer" className="bg-violet-400 w-1/4 rounded-md text-center font-bold py-1 px-2 hover:bg-violet-500">Learn More</a>
+            <a href={url} target="_blank" rel="noreferrer" className="bg-violet-400 gap-1 w-fit items-center rounded-md text-center font-bold py-1 px-2 flex hover:bg-violet-500">Learn More <HiArrowNarrowRight/></a>
         </article>
     );
 };

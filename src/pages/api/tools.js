@@ -2,6 +2,13 @@ const toolKits = {
     "backgrounds": [
         {
             "type": "BACKGROUNDS",
+            "name": "animated backgrounds",
+            "description": "With Animated Backgrounds, you can easily set a variety of elegant and engaging background animations with just a few clicks.",
+            "url": "https://animatedbackgrounds.me/",
+            "img": "/img/sites/backgrounds/animated-backgrounds.png"
+        },
+        {
+            "type": "BACKGROUNDS",
             "name": "svg wave",
             "description": "SVG Wave is a tool that allows you to create SVG waves for your website. You can customize the color, height, and width of the wave.",
             "url": "https://getwaves.io/",
@@ -27,6 +34,13 @@ const toolKits = {
             "description": "gradienta is a tool that allows you to create gradients for your website. You can customize the color, height, and width of the wave.",
             "url": "https://gradienta.io/",
             "img": "/img/sites/backgrounds/gradienta.png"
+        },
+        {
+            "type": "BACKGROUNDS",
+            "name": "css section separator",
+            "description": "css section separator is a tool that allows you to create section separators for your website. You can customize the color, height, and width of the wave.",
+            "url": "https://wweb.dev/resources/css-separator-generator/",
+            "img": "/img/sites/backgrounds/css-section-separator-generator.png"
         },
         {
             "type": "BACKGROUNDS",
@@ -103,6 +117,13 @@ const toolKits = {
         },
         {
             "type": "IMAGE OPTIMIZERS",
+            "name": "meta tags",
+            "description": "Meta Tags is a tool that allows you to generate meta tags for your website. You can customize the title, description, image, and url.",
+            "url": "https://metatags.io/",
+            "img": "/img/sites/image-optimizers/metatags.png"
+        },
+        {
+            "type": "IMAGE OPTIMIZERS",
             "name": "clipdrop",
             "description": "The ultimate ecosystem of apps, plugins & resources for all creators, powered by artificial intelligence.",
             "url": "https://clipdrop.co",
@@ -114,6 +135,13 @@ const toolKits = {
             "description": "Remove backgrounds 100% automatically in 5 seconds with one click.",
             "url": "https://www.remove.bg/",
             "img": "/img/sites/image-optimizers/removebg.png"
+        },
+        {
+            "type": "IMAGE OPTIMIZERS",
+            "name": "img upscaler",
+            "description": "AI-powered image upscaling. Enlarge your images without losing quality.",
+            "url": "https://imgupscaler.com/",
+            "img": "/img/sites/image-optimizers/imgupscaler.png"
         },
         {
             "type": "IMAGE OPTIMIZERS",
@@ -226,6 +254,13 @@ const toolKits = {
         },
         {
             "type": "ANIMATIONS",
+            "name": "keyframes",
+            "description": "Keyframes is a CSS animation tool that lets you create animations using CSS code.",
+            "url": "https://keyframes.app/",
+            "img": "/img/sites/animations/keyframes.png"
+        },
+        {
+            "type": "ANIMATIONS",
             "name": "aos",
             "description": "Animate On Scroll Library",
             "url": "https://michalsnik.github.io/aos/",
@@ -251,6 +286,13 @@ const toolKits = {
             "description": "A spring-physics based animation library for React",
             "url": "https://www.react-spring.io/",
             "img": "/img/sites/animations/react-spring.png"
+        },
+        {
+            "type": "ANIMATIONS",
+            "name": "transition css",
+            "description": "A collection of simple transitions and animations for CSS.",
+            "url": "https://www.transition.style",
+            "img": "/img/sites/animations/transitioncss.png"
         }
     ],
     "designs": [
@@ -387,6 +429,13 @@ const toolKits = {
         },
         {
             "type": "EXTENSIONS",
+            "name": "seo meta 1 click",
+            "description": "SEO Meta 1 Click is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to quickly add SEO meta tags to your website.",
+            "url": "https://chrome.google.com/webstore/detail/seo-meta-in-1-click/bjogjfinolnhfhkbipphpdlldadpnmhc?hl=es",
+            "img": "/img/sites/extensions/seometameta.png"
+        },
+        {
+            "type": "EXTENSIONS",
             "name": "json viewer pro",
             "description": "JSON Viewer Pro is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to view JSON documents in a tree view.",
             "url": "https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc",
@@ -434,6 +483,13 @@ const toolKits = {
             "description": "CSS Peeper is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to inspect the CSS of any element on a web page.",
             "url": "https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk",
             "img": "/img/sites/extensions/csspeeper.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "ligthhouse",
+            "description": "Lighthouse is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to analyze the performance of a web page.",
+            "url": "https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk",
+            "img": "/img/sites/extensions/lighthouse.png"
         }
     ],
     "fonts": [
@@ -573,6 +629,13 @@ const toolKits = {
             "description": "Heroicons is a set of free MIT-licensed high-quality SVG icons for you to use in your web projects.",
             "url": "https://heroicons.com/",
             "img": "/img/sites/icons/heroicons.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "lordicon",
+            "description": "Lordicon is a library of animated icons. It is a collection of CSS and JavaScript components.",
+            "url": "https://lordicon.com/",
+            "img": "/img/sites/icons/lordicon.png"
         }
     ],
     "svg-illustrations": [
@@ -582,6 +645,241 @@ const toolKits = {
             "description": "Open-source illustrations for any idea you can imagine and create.",
             "url": "https://undraw.co/illustrations",
             "img": "/img/sites/svg-illustrations/undraw.png"
+        },
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "open doodles",
+            "description": "Open Doodles is a library of illustrations that you can use in your next project.",
+            "url": "https://www.opendoodles.com/",
+            "img": "/img/sites/svg-illustrations/opendoodles.png"
+        },
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "humaaans",
+            "description": "Humaaans is a free illustrations library for your next project.",
+            "url": "https://www.humaaans.com/",
+            "img": "/img/sites/svg-illustrations/humaaans.png"
+        },
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "blush",
+            "description": "Blush is a free illustrations library for your next project.",
+            "url": "https://blush.design/",
+            "img": "/img/sites/svg-illustrations/blush.png"
+        },
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "interfacer",
+            "description": "Interfacer is a free illustrations library for your next project.",
+            "url": "https://interfacer.xyz/",
+            "img": "/img/sites/svg-illustrations/interfacer.png"
+        },
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "ouch",
+            "description": "Get trendier, more professional, and better-matching illustrations that enhance your projects and bring visual harmony into the world.",
+            "url": "https://icons8.com/ouch",
+            "img": "/img/sites/svg-illustrations/ouch.png"
+
+        }
+    ],
+    "components": [
+        {
+            "type": "COMPONENTS",
+            "name": "tailwind components",
+            "description": "Tailwind Components is a directory of beautiful UI components built with Tailwind CSS.",
+            "url": "https://tailwindcomponents.com/",
+            "img": "/img/sites/components/tailwindcomponents.png"
+        },
+        {
+            "type": "COMPONENTS",
+            "name": "css layout",
+            "description": "CSS Layout is a collection of popular layouts and patterns made with CSS.",
+            "url": "https://csslayout.io/",
+            "img": "/img/sites/components/csslayout.png"
+        },
+        {
+            "type": "COMPONENTS",
+            "name": "ui buttons",
+            "description": "UI Buttons is a collection of beautiful CSS buttons for you to use in your web projects.",
+            "url": "https://ui-buttons.web.app",
+            "img": "/img/sites/components/uibuttons.png"
+        },
+        {
+            "type": "COMPONENTS",
+            "name": "ui deck",
+            "description": "UI Deck is a collection of beautiful CSS components for you to use in your web projects.",
+            "url": "https://uideck.com/",
+            "img": "/img/sites/components/uideck.png"
+        },
+        {
+            "type": "COMPONENTS",
+            "name": "uiverse",
+            "description": "Uiverse Open-Source UI elements for any project.",
+            "url": "https://uiverse.io",
+            "img": "/img/sites/components/uiverse.png"
+        },
+        {
+            "type": "COMPONENTS",
+            "name": "tailblocks",
+            "description": "Tailblocks is a library of ready-to-use Tailwind CSS blocks.",
+            "url": "https://mertjf.github.io/tailblocks/",
+            "img": "/img/sites/components/tailblocks.png"
+        }
+    ],
+    "games": [
+        {
+            "type": "GAMES",
+            "name": "https://cssbattle.dev",
+            "description": "CSS Battle is a game where you write CSS to battle your friends and the community.",
+            "url": "https://cssbattle.dev",
+            "img": "/img/sites/games/cssbattle.png"
+        },
+        {
+            "type": "GAMES",
+            "name": "adventjs",
+            "description": "Adventjs is a webapp in honor of advent of Code which is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like.",
+            "url": "https://adventjs.dev/es",
+            "img": "/img/sites/games/adventjs.png"
+        }
+    ],
+    "shadows": [
+        {
+            "type": "SHADOWS",
+            "name": "neumorphism.io",
+            "description": "Neumorphism.io is a free tool that helps you create neumorphism design.",
+            "url": "https://neumorphism.io/",
+            "img": "/img/sites/shadows/neumorphism.png"
+        },
+        {
+            "type": "SHADOWS",
+            "name": "shadow palette generator",
+            "description": "Shadow Palette Generator is a free tool that helps you create beautiful shadows.",
+            "url": "https://www.joshwcomeau.com/shadow-palette/",
+            "img": "/img/sites/shadows/css-shadow-palette-generator.png"
+        },
+        {
+            "type": "SHADOWS",
+            "name": "cssmatic",
+            "description": "CSSmatic is a free tool that helps you create beautiful shadows.",
+            "url": "https://www.cssmatic.com/box-shadow",
+            "img": "/img/sites/shadows/cssmatic.png"
+        },
+        {
+            "type": "SHADOWS",
+            "name": "css scan",
+            "description": "CSS Scan is a free tool that helps you create beautiful shadows.",
+            "url": "https://getcssscan.com/css-box-shadow-examples",
+            "img": "/img/sites/shadows/cssscan.png"
+        },
+    ],
+    "apis": [
+        {
+            "type": "APIS",
+            "name": "json placeholder",
+            "description": "Fake Online REST API for Testing and Prototyping.",
+            "url": "https://jsonplaceholder.typicode.com/",
+            "img": "/img/sites/apis/jsonplaceholder.png"
+        },
+        {
+            "type": "APIS",
+            "name": "reqres",
+            "description": "A hosted REST-API ready to respond to your AJAX requests.",
+            "url": "https://reqres.in/",
+            "img": "/img/sites/apis/reqres.png"
+        },
+        {
+            "type": "APIS",
+            "name": "the movie db",
+            "description": "The Movie Database (TMDb) is a community built movie and TV database.",
+            "url": "https://www.themoviedb.org/",
+            "img": "/img/sites/apis/themoviedb.png"
+        },
+        {
+            "type": "APIS",
+            "name": "the cat api",
+            "description": "A public service API all about Cats, free to use when making your fancy new App, Website or Service.",
+            "url": "https://thecatapi.com/",
+            "img": "/img/sites/apis/thecatapi.png"
+        },
+        {
+            "type": "APIS",
+            "name": "exercise db",
+            "description": "Exercise DB is a free, open-source API for developers to get random exercises.",
+            "url": "https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb",
+            "img": "/img/sites/apis/exercisedb.png"
+        },
+        {
+            "type": "APIS",
+            "name": "fake store",
+            "description": "Fake Store API is an e-commerce API that can be used to build e-commerce sites and apps.",
+            "url": "https://fakestoreapi.com/",
+            "img": "/img/sites/apis/fakestore.png"
+        },
+        {
+            "type": "APIS",
+            "name": "fake store platzi",
+            "description": "Fake Store Platzi is an e-commerce API that can be used to build e-commerce sites and apps.",
+            "url": "https://fakeapi.platzi.com",
+            "img": "/img/sites/apis/fakestoreplatzi.png"
+        }
+    ],
+    "modules": [
+        {
+            "type": "MODULES",
+            "name": "react-multi-carousel",
+            "description": "A carousel component built with React and styled-components.",
+            "url": "https://www.npmjs.com/package/react-multi-carousel",
+            "img": "/img/sites/modules/react-multi-carousel.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-toastify",
+            "description": "React-Toastify is a React notification library that can be used to add notifications to your app with ease.",
+            "url": "https://www.npmjs.com/package/react-toastify",
+            "img": "/img/sites/modules/react-toastify.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-loader-spinner",
+            "description": "React-spinner-loader provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.",
+            "url": "https://www.npmjs.com/package/react-loader-spinner",
+            "img": "/img/sites/modules/react-loader-spinner.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-vertical-timeline",
+            "description": "A vertical timeline component for React.",
+            "url": "https://www.npmjs.com/package/react-vertical-timeline-component",
+            "img": "/img/sites/modules/react-vertical-timeline.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-credit-cards",
+            "description": "React Credit Cards is a React component for building a UI for entering and validating credit card details.",
+            "url": "https://www.npmjs.com/package/react-credit-cards",
+            "img": "/img/sites/modules/react-credit-cards.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-simple-typewriter",
+            "description": "A simple typewriter effect for React.",
+            "url": "https://www.npmjs.com/package/react-simple-typewriter",
+            "img": "/img/sites/modules/react-simple-typewriter.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "react-intersection-observer",
+            "description": "A React component for observing changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.",
+            "url": "https://www.npmjs.com/package/react-intersection-observer",
+            "img": "/img/sites/modules/react-intersection-observer.png"
+        },
+        {
+            "type": "MODULES",
+            "name": "emailjs",
+            "description": "EmailJS is a service that allows you to send emails from your client-side JavaScript code.",
+            "url": "https://www.npmjs.com/package/emailjs",
+            "img": "/img/sites/modules/emailjs.png"
         }
     ]
 }
