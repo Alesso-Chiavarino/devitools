@@ -21,9 +21,9 @@ const Layout = ({ title = 'DeviTools', children }) => {
                             {children}
                         </main>
                     </section>
+                    <Footer />
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

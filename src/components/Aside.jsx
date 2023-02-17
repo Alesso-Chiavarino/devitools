@@ -1,4 +1,4 @@
-import { toolkit } from "./ToolkitContainer";
+import { FrontToolkit, BackToolkit } from "./ToolkitContainer";
 import Link from "next/link";
 import styles from '../styles/Aside.module.scss'
 
@@ -12,12 +12,23 @@ const Aside = () => {
                 <div>
                     <ul className="w-3/4 mx-auto my-10 flex flex-col gap-12">
                         <h3 className="text-white text-3xl font-extrabold">Front End</h3>
-                        {toolkit.map((tool, i) => (
+                        {FrontToolkit.map((tool, i) => (
                             <li className={styles.li} key={i}>
                                 <Link href={tool.path}>
                                     <h3 className="text-white font-bold text-xl mb-3">{tool.name}</h3>
                                 </Link>
-                                <div className=" bg-white h-[2px]"/>
+                                <div className=" bg-white h-[2px]" />
+                            </li>
+                        ))}
+                    </ul>
+                    <ul className="w-3/4 mx-auto my-10 flex flex-col gap-12">
+                        <h3 className="text-white text-3xl font-extrabold">Back End</h3>
+                        {BackToolkit.map((tool, i) => (
+                            <li className={styles.li} key={i}>
+                                <Link href={tool.path}>
+                                    <h3 className="text-white font-bold text-xl mb-3">{tool.name}</h3>
+                                </Link>
+                                <div className=" bg-white h-[2px]" />
                             </li>
                         ))}
                     </ul>
