@@ -14,8 +14,8 @@ const Tool = ({ data }) => {
         <Layout title={`${params}-Toolkit`}>
             <div className="bg-black min-h-screen text-white ">
                 <div className="bg-gradient-to-r from-violet-400 via-blue-400 to-blue-600 pb-1">
-                    <div className="bg-black p-5">
-                        <h1 className="text-5xl font-extrabold mx-auto text-transparent bg-gradient-to-r from-white to-slate-300 bg-clip-text w-fit">{data[0].type}</h1>
+                    <div className="bg-black opacity-[0.93] p-5">
+                        <h1 className="text-5xl font-extrabold mx-auto text-transparent bg-gradient-to-tr from-white to-slate-300 bg-clip-text w-fit">{data[0].type}</h1>
                     </div>
                 </div>
 

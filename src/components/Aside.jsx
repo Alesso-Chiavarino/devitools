@@ -5,7 +5,7 @@ import styles from '../styles/Aside.module.scss'
 const Aside = () => {
     return (
         <aside className="w-1/6 bg-gradient-to-bl from-violet-400 via-blue-400 to-blue-400 pr-2 sticky top-0 h-screen overflow-y-auto">
-            <div className="bg-black h-auto py-5">
+            <div className="bg-black opacity-90 h-auto py-5">
                 <div className="bg-gradient-to-r from-violet-400 to-blue-400 w-3/4 mx-auto rounded-2xl p-1 text-center">
                     <h2 className="text-white font-extrabold text-xl">ToolKit</h2>
                 </div>
