@@ -262,6 +262,327 @@ const toolKits = {
             "img": "/img/sites/designs/glance.png"
 
         },
+        {
+            "type": "DESIGNS",
+            "name": "dribbble",
+            "description": "Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals.",
+            "url": "https://dribbble.com/",
+            "img": "/img/sites/designs/dribbble.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "landbook",
+            "description": "Landbook is a collection of beautiful landing pages.",
+            "url": "https://land-book.com",
+            "img": "/img/sites/designs/landbook.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "awwwards",
+            "description": "Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.",
+            "url": "https://www.awwwards.com/",
+            "img": "/img/sites/designs/awwwards.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "creative portfolios",
+            "description": "A collection of creative portfolios.",
+            "url": "https://www.creative-portfolios.com/",
+            "img": "/img/sites/designs/creativeportfolios.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "onepagelove",
+            "description": "One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.",
+            "url": "https://onepagelove.com/",
+            "img": "/img/sites/designs/onepagelove.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "collectui",
+            "description": "A daily collection of design inspiration and free resources for designers and developers.",
+            "url": "https://collectui.com/",
+            "img": "/img/sites/designs/collectui.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "ui8",
+            "description": "UI8 is a marketplace for design resources. We help designers buy and sell high quality design assets.",
+            "url": "https://ui8.net/",
+            "img": "/img/sites/designs/ui8.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "landingfolio",
+            "description": "Landingfolio is a collection of beautiful landing pages.",
+            "url": "https://landingfolio.com/",
+            "img": "/img/sites/designs/landingfolio.png"
+        },
+        {
+            "type": "DESIGNS",
+            "name": "saas landign pages",
+            "description": "A collection of beautiful SaaS landing pages.",
+            "url": "https://saaslandingpage.com",
+            "img": "/img/sites/designs/saaslandingpage.png"
+        },
+    ],
+    "hostings": [
+        {
+            "type": "HOSTINGS",
+            "name": "vercel",
+            "description": "Vercel is a cloud platform for static sites and Serverless Functions.",
+            "url": "https://vercel.com/",
+            "img": "/img/sites/hostings/vercel.png"
+        },
+        {
+            "type": "HOSTINGS",
+            "name": "netlify",
+            "description": "Netlify is a cloud platform for building, deploying, and managing modern web projects.",
+            "url": "https://www.netlify.com/",
+            "img": "/img/sites/hostings/netlify.png"
+        },
+        {
+            "type": "HOSTINGS",
+            "name": "000webhost",
+            "description": "000webhost is a free web hosting provider with no ads. It offers free web hosting with PHP, MySQL, cPanel, no forced ads on your website, and a free domain name.",
+            "url": "https://www.000webhost.com/",
+            "img": "/img/sites/hostings/000webhost.png"
+        },
+        {
+            "type": "HOSTINGS",
+            "name": "github pages",
+            "description": "GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.",
+            "url": "https://pages.github.com/",
+            "img": "/img/sites/hostings/githubpages.png"
+        },
+    ],
+    "extensions": [
+        {
+            "type": "EXTENSIONS",
+            "name": "react dev tools",
+            "description": "React Developer Tools is a Chrome DevTools extension for the open-source React JavaScript library.",
+            "url": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi",
+            "img": "/img/sites/extensions/reactdevtools.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "redux dev tools",
+            "description": "Redux DevTools is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI.",
+            "url": "https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd",
+            "img": "/img/sites/extensions/reduxdevtools.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "colorzilla",
+            "description": "ColorZilla is a free browser extension for Mozilla Firefox, Google Chrome, and Internet Explorer that allows you to get a color reading from any point in your browser, quickly adjust this color and paste it into another program.",
+            "url": "https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp",
+            "img": "/img/sites/extensions/colorzilla.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "dark reader",
+            "description": "Dark Reader is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that automatically inverts the brightness of the page.",
+            "url": "https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh",
+            "img": "/img/sites/extensions/darkreader.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "json viewer pro",
+            "description": "JSON Viewer Pro is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to view JSON documents in a tree view.",
+            "url": "https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc",
+            "img": "/img/sites/extensions/jsonviewerpro.png"
+
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "window resizer",
+            "description": "Window Resizer is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to resize the browser window to a specific size.",
+            "url": "https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh",
+            "img": "/img/sites/extensions/windowresizer.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "fonts ninja",
+            "description": "Fonts Ninja is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to preview fonts on any website.",
+            "url": "https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh",
+            "img": "/img/sites/extensions/fontsninja.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "allow cors",
+            "description": "Allow CORS: Access-Control-Allow-Origin is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to access resources from domains that are not the same as the domain of the resource you are trying to access.",
+            "url": "https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf",
+            "img": "/img/sites/extensions/allowcors.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "wappalyzer",
+            "description": "Wappalyzer is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to detect technologies used on websites.",
+            "url": "https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg",
+            "img": "/img/sites/extensions/wappalyzer.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "page ruler",
+            "description": "Page Ruler is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to measure the size of any element on a web page.",
+            "url": "https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff",
+            "img": "/img/sites/extensions/pageruler.png"
+        },
+        {
+            "type": "EXTENSIONS",
+            "name": "css peeper",
+            "description": "CSS Peeper is a free browser extension for Google Chrome, Mozilla Firefox, Microsoft Edge, Opera, and Safari that allows you to inspect the CSS of any element on a web page.",
+            "url": "https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk",
+            "img": "/img/sites/extensions/csspeeper.png"
+        }
+    ],
+    "fonts": [
+        {
+            "type": "FONTS",
+            "name": "google fonts",
+            "description": "Google Fonts is a library of 1,000 free licensed font families and APIs for conveniently using the fonts via CSS and Android.",
+            "url": "https://fonts.google.com/",
+            "img": "/img/sites/fonts/googlefonts.png"
+        },
+        {
+            "type": "FONTS",
+            "name": "font squirrel",
+            "description": "Font Squirrel is a library of 1,000 free licensed font families and APIs for conveniently using the fonts via CSS and Android.",
+            "url": "https://www.fontsquirrel.com/",
+            "img": "/img/sites/fonts/fontsquirrel.png"
+        },
+        {
+            "type": "FONTS",
+            "name": "cdn fonts",
+            "description": "CDN Fonts is a library of 1,000 free licensed font families and APIs for conveniently using the fonts via CSS and Android.",
+            "url": "https://www.cdnfonts.com/",
+            "img": "/img/sites/fonts/cdnfonts.png"
+        },
+        {
+            "type": "FONTS",
+            "name": "font share",
+            "description": "Font Share is a library of 1,000 free licensed font families and APIs for conveniently using the fonts via CSS and Android.",
+            "url": "https://fontshare.com/",
+            "img": "/img/sites/fonts/fontshare.png"
+        },
+        {
+            "type": "FONTS",
+            "name": "nerd fonts",
+            "description": "Nerd Fonts patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular ‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.",
+            "url": "https://www.nerdfonts.com/",
+            "img": "/img/sites/fonts/nerdfonts.png"
+        },
+    ],
+    "css-frameworks": [
+        {
+            "type": "CSS FRAMEWORKS",
+            "name": "bootstrap",
+            "description": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation and other interface components.",
+            "url": "https://getbootstrap.com/",
+            "img": "/img/sites/frameworks/bootstrap.png"
+        },
+        {
+            "type": "CSS FRAMEWORKS",
+            "name": "tailwind",
+            "description": "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
+            "url": "https://tailwindcss.com/",
+            "img": "/img/sites/frameworks/tailwind.png"
+        },
+        {
+            "type": "CSS FRAMEWORKS",
+            "name": "bulma",
+            "description": "Bulma is a free, open source CSS framework based on Flexbox and used by more than 100,000 developers.",
+            "url": "https://bulma.io/",
+            "img": "/img/sites/frameworks/bulma.png"
+        },
+        {
+            "type": "CSS FRAMEWORKS",
+            "name": "materialize",
+            "description": "Materialize is a modern responsive CSS framework based on Material Design by Google. It is a collection of CSS and JavaScript components.",
+            "url": "https://materializecss.com/",
+            "img": "/img/sites/frameworks/materialize.png"
+        },
+        {
+            "type": "CSS FRAMEWORKS",
+            "name": "pico",
+            "description": "Pico is a lightweight, mobile-first, responsive CSS framework. It is a collection of CSS and JavaScript components.",
+            "url": "https://picocss.com/",
+            "img": "/img/sites/frameworks/pico.png"
+        }
+    ],
+    "icons": [
+        {
+            "type": "ICONS",
+            "name": "font awesome",
+            "description": "Font Awesome is a font and icon toolkit based on CSS and LESS. It was made by Dave Gandy for use with Bootstrap, and later was incorporated into the BootstrapCDN.",
+            "url": "https://fontawesome.com/",
+            "img": "/img/sites/icons/fontawesome.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "react icons",
+            "description": "React Icons contains over 1,000 icons which are designed to work perfectly with React projects.",
+            "url": "https://react-icons.github.io/react-icons/",
+            "img": "/img/sites/icons/reacticons.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "grommet",
+            "description": "Grommet is a react-based framework that provides accessibility, modularity, responsiveness, and theming in a tidy package.",
+            "url": "https://v2.grommet.io/",
+            "img": "/img/sites/icons/grommet.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "devicon",
+            "description": "Devicon is a set of icons representing programming languages, designing & development tools.",
+            "url": "https://devicon.dev/",
+            "img": "/img/sites/icons/devicon.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "simple icons",
+            "description": "Simple Icons is a collection of icons for popular brands.",
+            "url": "https://simpleicons.org/",
+            "img": "/img/sites/icons/simpleicons.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "tabler icons",
+            "description": "Tabler Icons is a set of over 1,000 free MIT-licensed high-quality SVG icons for you to use in your web projects.",
+            "url": "https://tablericons.com/",
+            "img": "/img/sites/icons/tablericons.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "ikonate",
+            "description": "Ikonate are fully customisable & accessible*, well-optimised vector icons.",
+            "url": "https://ikonate.com",
+            "img": "/img/sites/icons/ikonate.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "boxicons",
+            "description": "Boxicons is a free and open source collection of 700+ carefully crafted SVG icons for you to use in your web projects.",
+            "url": "https://boxicons.com/",
+            "img": "/img/sites/icons/boxicons.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "heroicons",
+            "description": "Heroicons is a set of free MIT-licensed high-quality SVG icons for you to use in your web projects.",
+            "url": "https://heroicons.com/",
+            "img": "/img/sites/icons/heroicons.png"
+        }
+    ],
+    "svg-illustrations": [
+        {
+            "type": "SVG ILLUSTRATIONS",
+            "name": "undraw",
+            "description": "Open-source illustrations for any idea you can imagine and create.",
+            "url": "https://undraw.co/illustrations",
+            "img": "/img/sites/svg-illustrations/undraw.png"
+        }
     ]
 }
 
@@ -273,19 +594,7 @@ const getTools = (req, res) => {
         return res.status(200).json(toolKits[type])
     }
 
-    res.send('send a type')
-
-    // const type = 'color'
-
-    // const tool = toolKits[type]
-
-    // console.log(tool)
-
-    // res.send(tool)
-
-
-
-
+    res.send('send a type');
 
 }
 
