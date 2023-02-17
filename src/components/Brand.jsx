@@ -3,8 +3,8 @@ import 'animate.css';
 
 const Brand = () => {
     return (
-        <Link href='/' className="bg-gradient-to-r from-violet-400 to-blue-400 animate__animated animate__flipInX px-2">
-            <h1 className="text-2xl text-white font-extrabold">DeviTools</h1>
+        <Link href='/' className="bg-gradient-to-r flex items-center from-violet-400 to-blue-400 animate__animated animate__flipInX px-1 md:px-2">
+            <h1 className="text-md md:text-2xl text-white font-extrabold">DeviTools</h1>
         </Link>
     )
 }

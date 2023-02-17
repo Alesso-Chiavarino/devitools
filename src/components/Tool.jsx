@@ -6,7 +6,7 @@ const Tool = ({ name, path }) => {
         <Link href={path}>
             <article className={`${styles.tool} overflow-hidden rounded-md`}>
                 <div className="bg-black opacity-95 hover:opacity-[.96] h-40 flex justify-center text-white items-center rounded-md transition-all duration-500">
-                    <h5 className=" font-extrabold text-3xl drop-shadow-xl shadow-white-400">{name}</h5>
+                    <h5 className="font-extrabold text-md sm:text-xl md:text-2xl xl:text-3xl drop-shadow-xl shadow-white-400">{name}</h5>
                 </div>
             </article>
         </Link>
