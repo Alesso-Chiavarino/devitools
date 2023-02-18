@@ -124,6 +124,13 @@ const toolKits = {
         },
         {
             "type": "IMAGE OPTIMIZERS",
+            "name": "convertio",
+            "description": "Convertio is a free online file conversion tool that allows you to convert files from one format to another.",
+            "url": "https://convertio.co/",
+            "img": "/img/sites/image-optimizers/convertio.png"
+        },
+        {
+            "type": "IMAGE OPTIMIZERS",
             "name": "clipdrop",
             "description": "The ultimate ecosystem of apps, plugins & resources for all creators, powered by artificial intelligence.",
             "url": "https://clipdrop.co",
@@ -527,7 +534,7 @@ const toolKits = {
             "description": "Nerd Fonts patches developer targeted fonts with a high number of glyphs (icons). Specifically to add a high number of extra glyphs from popular ‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.",
             "url": "https://www.nerdfonts.com/",
             "img": "/img/sites/fonts/nerdfonts.png"
-        },
+        }
     ],
     "css-frameworks": [
         {
@@ -573,6 +580,13 @@ const toolKits = {
             "description": "Font Awesome is a font and icon toolkit based on CSS and LESS. It was made by Dave Gandy for use with Bootstrap, and later was incorporated into the BootstrapCDN.",
             "url": "https://fontawesome.com/",
             "img": "/img/sites/icons/fontawesome.png"
+        },
+        {
+            "type": "ICONS",
+            "name": "favicon",
+            "description": "The only favicon generator you need for your next project. Quickly generate your favicon from text, image, or choose from hundreds of emojis.",
+            "url": "https://favicon.io/",
+            "img": "/img/sites/icons/favicon.png"
         },
         {
             "type": "ICONS",
