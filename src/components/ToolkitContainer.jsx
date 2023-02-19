@@ -42,10 +42,6 @@ export const FrontToolkit = [
     path: '/toolkit/frontend/icons'
   },
   {
-    name: 'DESIGNS',
-    path: '/toolkit/frontend/designs'
-  },
-  {
     name: 'SVG ILLUSTRATIONS',
     path: '/toolkit/frontend/svg-illustrations'
   },
