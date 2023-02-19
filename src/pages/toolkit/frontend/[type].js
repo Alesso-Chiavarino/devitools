@@ -32,21 +32,21 @@ const Tool = ({ data }) => {
 
 export default Tool;
 
-// export const getStaticPaths = async () => {
-//     // const response = await fetch(`http://localhost:3000/api/paths`)
-//     const response = await fetch(`https://devitools.vercel.app/api/paths`)
-//     const data = await response.json()
+export const getStaticPaths = async () => {
+    // const response = await fetch(`http://localhost:3000/api/paths`)
+    const response = await fetch(`https://devitools.vercel.app/api/paths`)
+    const data = await response.json()
 
-//     const paths = data;
+    const paths = data;
 
-//     return {
-//         paths,
-//         fallback: false
-//     }
-// }
+    return {
+        paths,
+        fallback: false
+    }
+}
 
-// export const getStaticProps = async ({ params }) => {
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
+// export const getServerSideProps = async ({ params }) => {
 
     // const params = context.query.type;
     const type = params.type;
