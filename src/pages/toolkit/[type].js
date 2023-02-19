@@ -37,17 +37,11 @@ export const getStaticPaths = async () => {
     const response = await fetch(`https://devitools.vercel.app/api/tools`)
     const data = await response.json()
 
-    const dataArray = Object.entries(data)
-
-    const paths = dataArray.map((tool) => {
-        return {
-            params: { type: tool[0] }
-        }
-    })
+    const paths = data;
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -58,6 +52,7 @@ export const getStaticProps = async ({ params }) => {
     // const response = await fetch(`http://localhost:3000/api/tools/${type}`)
     const response = await fetch(`https://devitools.vercel.app/api/tools/${type}`)
     const data = await response.json()
+    // console.log(data)
 
     return {
         props: {
