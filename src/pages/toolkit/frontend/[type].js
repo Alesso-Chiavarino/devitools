@@ -48,12 +48,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
     // export const getServerSideProps = async ({ params }) => {
 
-    // const params = context.query.type;
     const type = params.type;
     // const response = await fetch(`http://localhost:3000/api/tools/frontend/${type}`)
     const response = await fetch(`https://devitools.vercel.app/api/tools/frontend/${type}`)
     const data = await response.json()
-    // console.log(data)
 
     return {
         props: {
