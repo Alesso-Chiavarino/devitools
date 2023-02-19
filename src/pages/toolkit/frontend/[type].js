@@ -33,8 +33,8 @@ const Tool = ({ data }) => {
 export default Tool;
 
 export const getStaticPaths = async () => {
-    // const response = await fetch(`http://localhost:3000/api/paths?type=frontend`)
-    const response = await fetch(`https://devitools.vercel.app/api/paths?type=frontend`)
+    const response = await fetch(`http://localhost:3000/api/paths?type=frontend`)
+    // const response = await fetch(`https://devitools.vercel.app/api/paths?type=frontend`)
     const data = await response.json()
 
     const paths = data;
