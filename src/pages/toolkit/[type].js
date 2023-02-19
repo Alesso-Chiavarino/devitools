@@ -32,12 +32,31 @@ const Tool = ({ data }) => {
 
 export default Tool;
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = async () => {
+    // const response = await fetch(`http://localhost:3000/api/tools`)
+    const response = await fetch(`https://devitools.vercel.app/api/tools`)
+    const data = await response.json()
 
-    const params = context.query.type;
-    // console.log(params)
-    // const response = await fetch(`http://localhost:3000/api/tools?type=${params}`)
-    const response = await fetch(`https://devitools.vercel.app/api/tools?type=${params}`)
+    const dataArray = Object.entries(data)
+
+    const paths = dataArray.map((tool) => {
+        return {
+            params: { type: tool[0] }
+        }
+    })
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export const getStaticProps = async ({ params }) => {
+
+    // const params = context.query.type;
+    const type = params.type;
+    // const response = await fetch(`http://localhost:3000/api/tools/${type}`)
+    const response = await fetch(`https://devitools.vercel.app/api/tools/${type}`)
     const data = await response.json()
 
     return {

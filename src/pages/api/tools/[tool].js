@@ -899,13 +899,16 @@ const toolKits = {
 }
 
 
-const getAllTools = (req, res) => {
+const getTools = (req, res) => {
 
-    // const type = req.query.type
-    // return res.status(200).json(toolKits[type])
+    if (req.query.tool) {
+        const type = req.query.tool
+        return res.status(200).json(toolKits[type])
+    }
+    // console.log(req.query.tool)
 
-    res.send(toolKits);
+    res.send('send a type');
 
 }
 
-export default getAllTools;
+export default getTools;
