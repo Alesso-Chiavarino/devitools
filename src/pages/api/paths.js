@@ -1,4 +1,4 @@
-const paths = [
+const frontPaths = [
     { params: { type: 'backgrounds' } },
     { params: { type: 'colors' } },
     { params: { type: 'animations' } },
@@ -11,7 +11,10 @@ const paths = [
     { params: { type: 'icons' } },
     { params: { type: 'svg-illustrations' } },
     { params: { type: 'games' } },
-    { params: { type: 'shadows' } },
+    { params: { type: 'shadows' } }
+]
+
+const backPaths = [
     { params: { type: 'apis' } },
     { params: { type: 'modules' } },
     { params: { type: 'backend-frameworks' } },
@@ -19,6 +22,13 @@ const paths = [
 ]
 
 
-const getAllPaths = (req, res) => res.send(paths);
+const getAllPaths = (req, res) => {
+
+    if (req.query.type === 'frontend') {
+        return res.send(frontPaths)
+    }
+
+    res.send(backPaths);
+}
 
 export default getAllPaths;
