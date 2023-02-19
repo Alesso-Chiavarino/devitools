@@ -13,7 +13,7 @@ const ToolCard = ({ name, description, url, img, recommended }) => {
             <p>{description}</p>
             <div className='flex justify-between'>
                 <a href={url} target="_blank" rel="noreferrer" className="bg-violet-400 gap-1 w-fit items-center rounded-md text-center font-bold py-1 px-2 flex hover:bg-violet-500">Learn More <HiArrowNarrowRight /></a>
-                {recommended && <span className='text-yellow-300 flex items-center gap-1 font-bold text-sm'><AiFillStar /> RECOMMENDED</span>}
+                {recommended && <span className='text-yellow-300 flex items-center gap-1 font-bold max-[480px]:text-[11px] text-sm'><AiFillStar /> RECOMMENDED</span>}
             </div>
         </article>
     );
