@@ -15,16 +15,10 @@ const paths = [
     { params: { type: 'apis' } },
     { params: { type: 'modules' } },
     { params: { type: 'backend-frameworks' } },
+    { params: { type: 'databases' } },
 ]
 
 
-const getAllTools = (req, res) => {
+const getAllPaths = (req, res) => res.send(paths);
 
-    // const type = req.query.type
-    // return res.status(200).json(toolKits[type])
-
-    res.send(paths);
-
-}
-
-export default getAllTools;
+export default getAllPaths;

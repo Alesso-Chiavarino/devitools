@@ -3,95 +3,87 @@ import Tool from "./Tool";
 export const FrontToolkit = [
   {
     name: 'BACKGROUNDS',
-    path: '/toolkit/backgrounds'
+    path: '/toolkit/frontend/backgrounds'
   },
   {
     name: 'COLORS',
-    path: '/toolkit/colors'
+    path: '/toolkit/frontend/colors'
   },
   {
     name: 'ANIMATIONS',
-    path: '/toolkit/animations'
+    path: '/toolkit/frontend/animations'
   },
   {
     name: 'EXTENSIONS',
-    path: '/toolkit/extensions'
+    path: '/toolkit/frontend/extensions'
   },
   {
     name: 'FONTS',
-    path: '/toolkit/fonts'
+    path: '/toolkit/frontend/fonts'
   },
   {
     name: 'CSS FRAMEWORKS',
-    path: '/toolkit/css-frameworks'
+    path: '/toolkit/frontend/css-frameworks'
   },
   {
     name: 'IMAGE OPTIMIZERS',
-    path: '/toolkit/image-optimizers'
+    path: '/toolkit/frontend/image-optimizers'
   },
   {
     name: 'COMPONENTS',
-    path: '/toolkit/components'
+    path: '/toolkit/frontend/components'
   },
   {
     name: 'DESIGNS',
-    path: '/toolkit/designs'
+    path: '/toolkit/frontend/designs'
   },
   {
     name: 'ICONS',
-    path: '/toolkit/icons'
+    path: '/toolkit/frontend/icons'
   },
   {
     name: 'DESIGNS',
-    path: '/toolkit/designs'
+    path: '/toolkit/frontend/designs'
   },
   {
     name: 'SVG ILLUSTRATIONS',
-    path: '/toolkit/svg-illustrations'
+    path: '/toolkit/frontend/svg-illustrations'
   },
   {
     name: 'GAMES',
-    path: '/toolkit/games'
+    path: '/toolkit/frontend/games'
   },
   {
     name: 'SHADOWS',
-    path: '/toolkit/shadows'
+    path: '/toolkit/frontend/shadows'
   },
   {
     name: 'APIS',
-    path: '/toolkit/apis'
+    path: '/toolkit/frontend/apis'
   },
   {
     name: 'MODULES',
-    path: '/toolkit/modules'
+    path: '/toolkit/frontend/modules'
   },
 ]
 
 export const BackToolkit = [
   {
-    name: 'EXTENSIONS',
-    path: '/toolkit/extensions'
-  },
-  {
     name: 'BACKEND FRAMEWORKS',
-    path: '/toolkit/backend-frameworks'
-  },
-  {
-    name: 'COMPONENTS',
-    path: '/toolkit/components'
-  },
-  {
-    name: 'GAMES',
-    path: '/toolkit/games'
-  },
-  {
-    name: 'APIS',
-    path: '/toolkit/apis'
+    path: '/toolkit/backend/backend-frameworks'
   },
   {
     name: 'MODULES',
-    path: '/toolkit/modules'
+    path: '/toolkit/backend/modules'
   },
+  {
+    name: 'DATABASES',
+    path: '/toolkit/backend/databases'
+  },
+  {
+    name: 'APIS',
+    path: '/toolkit/backend/apis'
+  }
 ]
 
 const ToolsContainer = () => {
