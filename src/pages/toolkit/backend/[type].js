@@ -45,8 +45,8 @@ export const getStaticPaths = async () => {
     }
 }
 
-// export const getStaticProps = async ({ params }) => {
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
+// export const getServerSideProps = async ({ params }) => {
 
     // const params = context.query.type;
     const type = params.type;
