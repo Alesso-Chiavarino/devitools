@@ -11,7 +11,9 @@ const frontPaths = [
     { params: { type: 'icons' } },
     { params: { type: 'svg-illustrations' } },
     { params: { type: 'games' } },
-    { params: { type: 'shadows' } }
+    { params: { type: 'shadows' } },
+    { params: { type: 'apis' } },
+    { params: { type: 'modules' } }
 ]
 
 const backPaths = [
