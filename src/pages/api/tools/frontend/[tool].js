@@ -34,6 +34,14 @@ const toolKits = {
         },
         {
             "type": "BACKGROUNDS",
+            "name": "magic pattern",
+            "description": "Magic Pattern is a tool that allows you to create SVG patterns for your website. You can customize the color, height, and width of the wave.",
+            "url": "https://www.magicpattern.design/tools/css-backgrounds",
+            "img": "/img/sites/frontend/backgrounds/magicpattern.png",
+            "recommended": false
+        },
+        {
+            "type": "BACKGROUNDS",
             "name": "gradienta",
             "description": "gradienta is a tool that allows you to create gradients for your website. You can customize the color, height, and width of the wave.",
             "url": "https://gradienta.io/",
@@ -149,6 +157,14 @@ const toolKits = {
         },
         {
             "type": "IMAGE OPTIMIZERS",
+            "name": "browserframe",
+            "description": "Browserframe is a tool that allows you to create a browser frame for your website. You can customize the color, height, and width of the frame.",
+            "url": "https://browserframe.com/",
+            "img": "/img/sites/frontend/image-optimizers/browserframe.png",
+            "recommended": true
+        },
+        {
+            "type": "IMAGE OPTIMIZERS",
             "name": "clipdrop",
             "description": "The ultimate ecosystem of apps, plugins & resources for all creators, powered by artificial intelligence.",
             "url": "https://clipdrop.co",
@@ -231,11 +247,19 @@ const toolKits = {
         },
         {
             "type": "COLORS",
-            "name": "hue.tools",
-            "description": "Hue.tools is a free tool to help you find the perfect color palette for your next project.",
-            "url": "https://hue.tools/",
-            "img": "/img/sites/frontend/colors/hue-tools.png",
-            "recommended": true
+            "name": "coolors",
+            "description": "The super fast color schemes generator! Create, save and share perfect palettes in seconds!",
+            "url": "https://coolors.co/",
+            "img": "/img/sites/frontend/colors/coolors.png",
+            "recommended": false
+        },
+        {
+            "type": "COLORS",
+            "name": "css gradient",
+            "description": "A free and open source tool that lets you create a gradient background for websites. It comes with a collection of pre-made gradients that you can use, or you can create your own using the color picker.",
+            "url": "https://cssgradient.io/",
+            "img": "/img/sites/frontend/colors/cssgradient.png",
+            "recommended": false
         },
         {
             "type": "COLORS",
@@ -361,6 +385,14 @@ const toolKits = {
             "url": "https://dribbble.com/",
             "img": "/img/sites/frontend/designs/dribbble.png",
             "recommended": false
+        },
+        {
+            "type": "DESIGNS",
+            "name": "readme.so",
+            "description": "A simple way to create beautiful READMEs for your GitHub projects.",
+            "url": "https://readme.so/",
+            "img": "/img/sites/frontend/designs/readme.png",
+            "recommended": true
         },
         {
             "type": "DESIGNS",

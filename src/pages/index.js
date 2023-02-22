@@ -1,7 +1,6 @@
 import Banner from '@/components/Banner'
 import Layout from '@/components/Layout'
 import ToolkitContainer from '@/components/ToolkitContainer'
-import styles from '@/styles/Home.module.css'
 
 
 const Home = () => {
