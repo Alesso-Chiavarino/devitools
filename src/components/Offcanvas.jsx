@@ -4,7 +4,7 @@ import { FrontToolkit, BackToolkit } from "./ToolkitContainer"
 import styles from '@/styles/Aside.module.scss';
 
 
-const Offcanvas = ({ show }) => {
+const Offcanvas = ({ show, setShow }) => {
     return (
         <div className={show ? "offcanvas bg-black translate-x-[0%] transition-all overflow-y-auto duration-300 w-full h-screen  fixed z-30" : "offcanvas bg-black translate-x-[100%] transition-all duration-300 w-full h-screen  fixed z-30"}>
 
@@ -17,7 +17,7 @@ const Offcanvas = ({ show }) => {
                 <h3 className="text-white text-3xl font-extrabold">Front End</h3>
                 {FrontToolkit.map((tool, i) => (
                     <li key={i} className={styles.li}>
-                        <Link href={tool.path}>
+                        <Link href={tool.path} onClick={() => setShow(!show)}>
                             <h3 className="text-white font-bold text-xl mb-3">{tool.name}</h3>
                         </Link>
                         <div className=" bg-white h-[2px]" />
@@ -25,10 +25,10 @@ const Offcanvas = ({ show }) => {
                 ))}
             </ul>
             <ul className="w-3/4 mx-auto mb-16 flex flex-col gap-7">
-                <h3 className="text-white text-3xl font-extrabold">Front End</h3>
+                <h3 className="text-white text-3xl font-extrabold">Back End</h3>
                 {BackToolkit.map((tool, i) => (
-                    <li key={i} className={styles.li}>
-                        <Link href={tool.path}>
+                    <li key={i} className={styles.li} >
+                        <Link href={tool.path} onClick={() => setShow(!show)}>
                             <h3 className="text-white font-bold text-xl mb-3">{tool.name}</h3>
                         </Link>
                         <div className=" bg-white h-[2px]" />
