@@ -954,6 +954,14 @@ const toolKits = {
         },
         {
             "type": "APIS",
+            "name": "giphy",
+            "description": "GIPHY is your top source for the best & newest GIFs & Animated Stickers online.",
+            "url": "https://developers.giphy.com/",
+            "img": "/img/sites/frontend/apis/giphy.png",
+            "recommended": false
+        },
+        {
+            "type": "APIS",
             "name": "the cat api",
             "description": "A public service API all about Cats, free to use when making your fancy new App, Website or Service.",
             "url": "https://thecatapi.com/",
