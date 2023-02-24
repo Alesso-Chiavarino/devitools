@@ -860,6 +860,14 @@ const toolKits = {
         },
         {
             "type": "COMPONENTS",
+            "name": "tailwind kit",
+            "description": "Tailwind Kit is a collection of beautiful Tailwind CSS components.",
+            "url": "https://www.tailwind-kit.com/",
+            "img": "/img/sites/frontend/components/tailwindkit.png",
+            "recommended": false
+        },
+        {
+            "type": "COMPONENTS",
             "name": "uiverse",
             "description": "Uiverse Open-Source UI elements for any project.",
             "url": "https://uiverse.io",
