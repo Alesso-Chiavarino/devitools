@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { FaCircle } from 'react-icons/fa'
 import { IoChevronBack, IoSend } from 'react-icons/io5'
 
-const Bot = ({ setIsShow }) => {
+const Bot = ({ setIsShow, isShow }) => {
 
     const [prompt, setPrompt] = useState('')
     const [response, setResponse] = useState('Hola, bienvenido a devitools!, ¿en que te puedo ayudar? ')
@@ -156,14 +156,20 @@ const Bot = ({ setIsShow }) => {
     }
 
     return (
-        <div className='bg-black w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4'>
+        <div style={{ animationDuration: '.3s' }} className={isShow ? 'bg-[rgba(0,0,0,.97)] animate__animated animate__fadeInUp w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4' : 'bg-black animate__animated animate__fadeOutDown w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-0 z-50 right-4'}>
 
             <form action="" onSubmit={(e) => handleSubmit(e)}>
-                <div className='bg-blue-400 flex items-center gap-5'>
+                <div className='bg-gradient-to-r from-violet-400 to-blue-400 flex items-center gap-5'>
                     <IoChevronBack className='text-white ml-1 text-xl cursor-pointer' onClick={() => setIsShow(false)} />
                     <div className='flex items-center gap-2 py-2'>
-                        <FaCircle className='text-green-400 bg-white rounded-full p-[1px]' />
-                        <h3 className='text-white font-bold'>Bot- Devitools</h3>
+                        <div className='w-10 rounded-full relative p-1 bg-white border-[2px] border-black'>
+                            <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" alt="" />
+                            <FaCircle className='text-green-400 absolute text-xs -right-0 -bottom-1 bg-black rounded-full p-[1px]' />
+                        </div>
+                        <div className='flex flex-col'>
+                            <h3 className='text-white font-extrabold'>Bot- Devitools</h3>
+                            <span className='text-gray-50 text-sm -mt-1'>Online</span>
+                        </div>
                     </div>
                 </div>
 
@@ -171,26 +177,26 @@ const Bot = ({ setIsShow }) => {
 
                     <ul className='text-white p-5 flex flex-col gap-2 h-[400px] overflow-y-auto'>
                         {responses?.map((response, index) => (
-                            <li key={index} className={index % 2 === 0 ? 'flex items-center gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
-                                <div className={index % 2 === 0 && 'bg-white rounded-full w-10 p-1'}>
-                                    {index % 2 === 0 && <img src="./img/chatbot-icon.svg" className='w-full h-full object-cover' alt="" />}
+                            <li key={index} className={index % 2 === 0 ? 'flex gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
+                                <div className={index % 2 === 0 && 'bg-white rounded-full self-end h-8 w-8 p-1'}>
+                                    {index % 2 === 0 && <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />}
                                 </div>
                                 {index % 2 === 0 ? (
-                                    <div className='bg-gray-800 rounded-md p-2 w-3/4'>
+                                    <div className='bg-gray-800 rounded-t-md rounded-br-md p-2 w-fit max-w-[75%]'>
                                         <p className='text-white'>{response}</p>
                                     </div>
                                 ) : (
                                     <>
-                                        <div className='bg-gray-600 rounded-md p-2 max-w-2/4 w-fit'>
+                                        <div className='bg-gray-600  rounded-t-md rounded-bl-md p-2 max-w-2/4 w-fit'>
                                             <p className='text-white'>{response}</p>
                                         </div>
                                         {(loader && index == responses.length - 1) &&
 
                                             <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4'>
-                                                <div className='bg-white rounded-full p-1 w-10'>
-                                                    <img src="./img/chatbot-icon.svg" className='w-full h-full object-cover' alt="" />
+                                                <div className='bg-white rounded-full self-end p-1 h-8 w-8'>
+                                                    <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />
                                                 </div>
-                                                <div className='bg-gray-800 rounded-md p-2 '>
+                                                <div className='bg-gray-800 rounded-t-md rounded-br-md p-2 '>
                                                     <span className='text-white'>...</span>
                                                 </div>
                                             </div>
