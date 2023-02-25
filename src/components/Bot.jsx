@@ -2,21 +2,27 @@ import { useState, useEffect } from 'react'
 import { FaCircle } from 'react-icons/fa'
 import { IoChevronBack, IoSend } from 'react-icons/io5'
 
-const ai = () => {
+const Bot = ({ setIsShow }) => {
 
     const [prompt, setPrompt] = useState('')
     const [response, setResponse] = useState('Hola, bienvenido a devitools!, ¿en que te puedo ayudar? ')
     const [responses, setResponses] = useState([])
+    const [loader, setLoader] = useState(false)
 
     const COHERE_API_KEY = 'kmnDO3nquzuMMNemFi6rvlya227mAeT4jXVJDhmj'
     const COHERE_API_URL = 'https://api.cohere.ai/generate'
 
     const fetchCohere = async (input) => {
+        try {
+            setLoader(true)
+            setResponses([...responses, input])
+            setPrompt('')
 
-        const data = {
-            model: 'xlarge',
-            // FORMATO => ¿donde puedo encontrar fuentes?
-            prompt: `Esto es un bot que te guiará para encontrar la herramienta que necesitas.
+            const data = {
+
+                model: 'xlarge',
+                // FORMATO => ¿donde puedo encontrar fuentes?
+                prompt: `Esto es un bot que te guiará para encontrar la herramienta que necesitas.
             --
             Pregunta: ¿Dónde puedo encontrar fondos de pantalla para mi sitio web?
             Respuesta: Puedes encontrar fondos de pantalla en la sección Backgrounds de nuestra página web.
@@ -95,44 +101,47 @@ const ai = () => {
             --
             Pregunta: ${input}
             Respuesta:`,
-            truncate: 'END',
-            temperature: 0.3,
-            k: 0,
-            p: 1,
-            frequency_penalty: 0,
-            presence_penalty: 0,
-            stop_sequences: ['--'],
-            return_likelihoods: 'NONE'
-        }
+                truncate: 'END',
+                temperature: 0.3,
+                k: 0,
+                p: 1,
+                frequency_penalty: 0,
+                presence_penalty: 0,
+                stop_sequences: ['--'],
+                return_likelihoods: 'NONE'
+            }
 
-        const options = {
-            method: 'POST',
-            headers: {
-                authorization: `Bearer ${COHERE_API_KEY}`,
-                "Cohere-Version": '2022-12-06',
-                'Content-Type': 'application/json'
+            const options = {
+                method: 'POST',
+                headers: {
+                    authorization: `Bearer ${COHERE_API_KEY}`,
+                    "Cohere-Version": '2022-12-06',
+                    'Content-Type': 'application/json'
 
-            },
-            body: JSON.stringify(data)
+                },
+                body: JSON.stringify(data)
+            }
+            const responsee = await fetch(COHERE_API_URL, options)
+            const dataFromResponse = await responsee.json()
+            const { text } = dataFromResponse.generations[0]
+            const newText = text
+                .replace('--', '')
+                .replaceAll('"', '')
+                .trim()
+            if (newText === '') {
+                return console.log('No te entendí, por favor, intenta de nuevo.')
+            }
+            setResponse(newText)
+
+            setResponses([...responses, input, newText])
         }
-        const response = await fetch(COHERE_API_URL, options)
-        const dataFromResponse = await response.json()
-        // console.log(dataFromResponse)
-        const { text } = dataFromResponse.generations[0]
-        const newText = text
-            .replace('--', '')
-            .replaceAll('"', '')
-            .trim()
-        if (newText === '') {
-            return console.log('I dont understand you, please try again')
+        catch (err) {
+            console.log(err)
         }
-        // console.log(input)
-        // console.log(newText)
-        setResponse(newText)
-        setResponses([...responses, newText])
-        setPrompt('')
+        finally {
+            setLoader(false)
+        }
     }
-
     const handleChange = (e) => {
         setPrompt(e.target.value)
     }
@@ -146,79 +155,63 @@ const ai = () => {
         fetchCohere(prompt)
     }
 
-
     return (
-        <div className='flex justify-center items-center mt-5 bg-black p-20'>
-            <div className='bg-black w-1/4 rounded-md overflow-hidden h-fit border-2 border-white'>
+        <div className='bg-black w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4'>
 
-                <form action="" onSubmit={(e) => handleSubmit(e)}>
-                    <div className='bg-blue-400 flex items-center gap-5'>
-                        <IoChevronBack className='text-white ml-1 text-xl cursor-pointer' />
-                        <div className='flex items-center gap-2 py-2'>
-                            <FaCircle className='text-green-400 bg-white rounded-full p-[1px]' />
-                            <h3 className='text-white font-bold'>Bot- Devitools</h3>
-                        </div>
+            <form action="" onSubmit={(e) => handleSubmit(e)}>
+                <div className='bg-blue-400 flex items-center gap-5'>
+                    <IoChevronBack className='text-white ml-1 text-xl cursor-pointer' onClick={() => setIsShow(false)} />
+                    <div className='flex items-center gap-2 py-2'>
+                        <FaCircle className='text-green-400 bg-white rounded-full p-[1px]' />
+                        <h3 className='text-white font-bold'>Bot- Devitools</h3>
                     </div>
+                </div>
 
-                    <div className='flex flex-col justify-between h-full'>
+                <div className='flex flex-col justify-between h-fit'>
 
-                        <ul className='text-white p-5 flex flex-col gap-2'>
-                            {responses?.map((response, index) => (
-                                <li key={index} className='flex items-center gap-2'>
-                                    <div className='bg-white rounded-full w-10 p-1'>
-                                        <img src="./img/chatbot-icon.svg" className='w-full h-full object-cover' alt="" />
+                    <ul className='text-white p-5 flex flex-col gap-2 h-[400px] overflow-y-auto'>
+                        {responses?.map((response, index) => (
+                            <li key={index} className={index % 2 === 0 ? 'flex items-center gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
+                                <div className={index % 2 === 0 && 'bg-white rounded-full w-10 p-1'}>
+                                    {index % 2 === 0 && <img src="./img/chatbot-icon.svg" className='w-full h-full object-cover' alt="" />}
+                                </div>
+                                {index % 2 === 0 ? (
+                                    <div className='bg-gray-800 rounded-md p-2 w-3/4'>
+                                        <p className='text-white'>{response}</p>
                                     </div>
-                                    <p className='bg-gray-800 rounded-md p-2'>{response}</p>
-                                </li>
-                            ))}
-                        </ul>
+                                ) : (
+                                    <>
+                                        <div className='bg-gray-600 rounded-md p-2 max-w-2/4 w-fit'>
+                                            <p className='text-white'>{response}</p>
+                                        </div>
+                                        {(loader && index == responses.length - 1) &&
 
-                        <div className="border-t-[1px] border-gray-200 py-2 flex items-center">
-                            <input defaultValue={prompt} value={prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
-                            <IoSend className='text-white mx-2 cursor-pointer text-xl' onClick={() => {
-                                fetchCohere(prompt)
-                            }}></IoSend>
-                        </div>
+                                            <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4'>
+                                                <div className='bg-white rounded-full p-1 w-10'>
+                                                    <img src="./img/chatbot-icon.svg" className='w-full h-full object-cover' alt="" />
+                                                </div>
+                                                <div className='bg-gray-800 rounded-md p-2 '>
+                                                    <span className='text-white'>...</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="border-t-[1px] border-gray-200 py-2 flex items-center">
+                        <input defaultValue={prompt} value={prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white placeholder:text-gray-300 px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
+                        <IoSend className='hover:text-white mx-2 text-gray-300 cursor-pointer text-xl' onClick={() => {
+                            fetchCohere(prompt)
+                        }}></IoSend>
                     </div>
+                </div>
 
-                </form>
-            </div>
-        </div>
+            </form>
+        </div >
     )
 }
 
-export default ai
-
-
-
-
-
-
-//     prompt: `This is a spell checker generator.
-            // --
-            // Incorrect sample: "I are good!"
-            // Correct sample: "I am good!"
-            // --
-            // Incorrect sample: "I have 22 years old."
-            // Correct sample: "I am 22 years old."
-            // --
-            // Incorrect sample: "I don't can know"
-            // Correct sample: "I don't know"
-            // --
-            // Incorrect sample: "${input}"
-            // Correct sample:`,
-            // prompt: `this is a pet name generator.
-            // give me caracteristics of your pet and i will give you a name.
-            // --
-            // example: "my pet is a dog and is very cute"
-            // response: "your pet name is: puppy"
-            // --
-            // example: "my pet is a cat and is very cute"
-            // response: "your pet name is: kitty"
-            // --
-            // example: "my pet is a cat and is orange"
-            // response: "your pet name is: garfield"
-            // --
-            // ${input}
-            // response:`,
-            // prompt: `This is a bot that will guide you to found the tool that you need.
+export default Bot

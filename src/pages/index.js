@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <>
       <Layout title='Home' >
-          <div className='bg-black'>
-            <Banner />
-            <ToolkitContainer />
-          </div>
+        <div className='bg-black'>
+          <Banner />
+          <ToolkitContainer />
+        </div>
       </Layout>
     </>
   )

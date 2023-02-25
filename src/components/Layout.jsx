@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Aside from './Aside';
+import BotButtom from './BotButtom';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -21,6 +22,7 @@ const Layout = ({ title = 'DeviTools', children }) => {
                             {children}
                         </main>
                     </section>
+                    <BotButtom />
                     <Footer />
                 </div>
             </div>
