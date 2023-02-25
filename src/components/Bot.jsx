@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaCircle } from 'react-icons/fa'
 import { IoChevronBack, IoSend } from 'react-icons/io5'
+import BotMessage from './BotMessage'
 
 const Bot = ({ setIsShow, isShow }) => {
 
@@ -150,13 +151,17 @@ const Bot = ({ setIsShow, isShow }) => {
         setResponses([response])
     }, [])
 
+    useEffect(() => {
+        ul.scrollTo(0, ul.scrollHeight)
+    }, [responses])
+
     const handleSubmit = (e) => {
         e.preventDefault()
         fetchCohere(prompt)
     }
 
     return (
-        <div style={{ animationDuration: '.3s' }} className={isShow ? 'bg-[rgba(0,0,0,.97)] animate__animated animate__fadeInUp w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4' : 'bg-black animate__animated animate__fadeOutDown w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-0 z-50 right-4'}>
+        <div style={{ animationDuration: '.3s' }} className={isShow ? 'bg-[rgba(0,0,0,.97)] animate__animated animate__fadeInUp max-[800px]:w-3/4 max-[1200px]:w-2/4 lg:w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4' : 'bg-black animate__animated animate__fadeOutDown w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-0 z-50 right-4'}>
 
             <form action="" onSubmit={(e) => handleSubmit(e)}>
                 <div className='bg-gradient-to-r from-violet-400 to-blue-400 flex items-center gap-5'>
@@ -175,35 +180,9 @@ const Bot = ({ setIsShow, isShow }) => {
 
                 <div className='flex flex-col justify-between h-fit'>
 
-                    <ul className='text-white p-5 flex flex-col gap-2 h-[400px] overflow-y-auto'>
+                    <ul id='ul' className='text-white p-5 flex flex-col gap-2 h-[400px] overflow-y-auto'>
                         {responses?.map((response, index) => (
-                            <li key={index} className={index % 2 === 0 ? 'flex gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
-                                <div className={index % 2 === 0 && 'bg-white rounded-full self-end h-8 w-8 p-1'}>
-                                    {index % 2 === 0 && <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />}
-                                </div>
-                                {index % 2 === 0 ? (
-                                    <div className='bg-gray-800 rounded-t-md rounded-br-md p-2 w-fit max-w-[75%]'>
-                                        <p className='text-white'>{response}</p>
-                                    </div>
-                                ) : (
-                                    <>
-                                        <div className='bg-gray-600  rounded-t-md rounded-bl-md p-2 max-w-2/4 w-fit'>
-                                            <p className='text-white'>{response}</p>
-                                        </div>
-                                        {(loader && index == responses.length - 1) &&
-
-                                            <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4'>
-                                                <div className='bg-white rounded-full self-end p-1 h-8 w-8'>
-                                                    <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />
-                                                </div>
-                                                <div className='bg-gray-800 rounded-t-md rounded-br-md p-2 '>
-                                                    <span className='text-white'>...</span>
-                                                </div>
-                                            </div>
-                                        }
-                                    </>
-                                )}
-                            </li>
+                            <BotMessage loader={loader} responses={responses} key={index} index={index} response={response} />
                         ))}
                     </ul>
 
@@ -214,7 +193,6 @@ const Bot = ({ setIsShow, isShow }) => {
                         }}></IoSend>
                     </div>
                 </div>
-
             </form>
         </div >
     )
