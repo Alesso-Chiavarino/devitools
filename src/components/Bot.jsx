@@ -170,7 +170,7 @@ const Bot = ({ setIsShow, isShow }) => {
                     <IoChevronBack className='text-white ml-1 text-xl cursor-pointer' onClick={() => setIsShow(false)} />
                     <div className='flex items-center gap-2 py-2'>
                         <div className='w-10 rounded-full relative p-1 bg-white border-[2px] border-black'>
-                            <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" alt="" />
+                            <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" alt="chatbot-image" title='chatbot-image' />
                             <FaCircle className='text-green-400 absolute text-xs -right-0 -bottom-1 bg-black rounded-full p-[1px]' />
                         </div>
                         <div className='flex flex-col'>

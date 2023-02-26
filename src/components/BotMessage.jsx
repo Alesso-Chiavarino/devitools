@@ -7,7 +7,7 @@ const BotMessage = ({ response, index, loader, responses }) => {
     return (
         <li className={index % 2 === 0 ? 'flex gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
             <div className={index % 2 === 0 ? 'bg-white rounded-full self-end h-8 w-8 p-1' : null}>
-                {index % 2 === 0 && <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />}
+                {index % 2 === 0 && <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" alt="chatbot-image" title='chatbot-image' className='w-full h-full object-cover' />}
             </div>
             {index % 2 === 0 ? (
                 <div className='bg-gray-800 rounded-t-md rounded-br-md p-2 w-fit max-w-[75%] flex flex-col gap-2'>
@@ -41,7 +41,7 @@ const BotMessage = ({ response, index, loader, responses }) => {
 
                         <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4 pb-5'>
                             <div className='bg-white rounded-full self-end p-1 h-8 w-8'>
-                                <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />
+                                <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" alt="chatbot-image" title='chatbot-image' className='w-full h-full object-cover' />
                             </div>
                             <div className='bg-gray-800 rounded-t-md rounded-br-md flex justify-center items-center p-2 w-[80px] pl-8'>
                                 <span className={styles.loader}></span>
