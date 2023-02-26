@@ -2,8 +2,6 @@ import Layout from "@/components/Layout";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ToolCard from "@/components/ToolCard";
-// import styles from '../../styles/Toolkit.module.css'
-
 const Tool = ({ data }) => {
 
     const router = useRouter();

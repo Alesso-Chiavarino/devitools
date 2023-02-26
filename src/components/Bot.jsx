@@ -1,3 +1,4 @@
+import { useBot } from '@/context/botContext'
 import { useState, useEffect } from 'react'
 import { FaCircle } from 'react-icons/fa'
 import { IoChevronBack, IoSend } from 'react-icons/io5'
@@ -5,10 +6,10 @@ import BotMessage from './BotMessage'
 
 const Bot = ({ setIsShow, isShow }) => {
 
-    const [prompt, setPrompt] = useState('')
-    const [response, setResponse] = useState('Hola, bienvenido a devitools!, ¿en que te puedo ayudar? ')
-    const [responses, setResponses] = useState([])
     const [loader, setLoader] = useState(false)
+
+    const { prompt, response, responses, handlePromptState, handleResponseState, handleResponsesState } = useBot()
+
 
     const COHERE_API_KEY = 'kmnDO3nquzuMMNemFi6rvlya227mAeT4jXVJDhmj'
     const COHERE_API_URL = 'https://api.cohere.ai/generate'
@@ -16,13 +17,12 @@ const Bot = ({ setIsShow, isShow }) => {
     const fetchCohere = async (input) => {
         try {
             setLoader(true)
-            setResponses([...responses, input])
-            setPrompt('')
+            handleResponsesState([...responses, input])
+            handlePromptState('')
 
             const data = {
 
                 model: 'xlarge',
-                // FORMATO => ¿donde puedo encontrar fuentes?
                 prompt: `Esto es un bot que te guiará para encontrar la herramienta que necesitas.
             --
             Pregunta: ¿Dónde puedo encontrar fondos de pantalla para mi sitio web?
@@ -74,7 +74,7 @@ const Bot = ({ setIsShow, isShow }) => {
             Respuesta: Puedes encontrar sombras en la sección Shadows de nuestra página web.
             --
             Pregunta: ¿Dónde puedo encontrar apis para mi sitio web?
-            Respuesta: Puedes encontrar apis en la sección APIs de nuestra página web.
+            Respuesta: Puedes encontrar apis en la sección Apis de nuestra página web.
             --
             Pregunta: ¿Dónde puedo encontrar modulos para mi sitio web?
             Respuesta: Puedes encontrar modulos en la sección Modules de nuestra página web.
@@ -89,7 +89,7 @@ const Bot = ({ setIsShow, isShow }) => {
             Respuesta: Puedes encontrar bases de datos en la sección Databases de nuestra página web.
             --
             Prengunta: ¿Dónde puedo encontrar apis para el backend de mi sitio web?
-            Respuesta: Puedes encontrar apis en el apartado de Backend, sección APIs de nuestra página web.
+            Respuesta: Puedes encontrar apis en el apartado de Backend, sección Apis de nuestra página web.
             --
             Pregunta: ¿Dónde puedo encontrar herramientas para el front end?
             Respuesta: Puedes encontrar herramientas en la sección Front End de nuestra página web.
@@ -132,9 +132,9 @@ const Bot = ({ setIsShow, isShow }) => {
             if (newText === '') {
                 return console.log('No te entendí, por favor, intenta de nuevo.')
             }
-            setResponse(newText)
+            handleResponseState(newText)
 
-            setResponses([...responses, input, newText])
+            handleResponsesState([...responses, input, newText])
         }
         catch (err) {
             console.log(err)
@@ -144,11 +144,13 @@ const Bot = ({ setIsShow, isShow }) => {
         }
     }
     const handleChange = (e) => {
-        setPrompt(e.target.value)
+        handlePromptState(e.target.value)
     }
 
     useEffect(() => {
-        setResponses([response])
+        if (responses.length === 0) {
+            handleResponsesState([response])
+        }
     }, [])
 
     useEffect(() => {
