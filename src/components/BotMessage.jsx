@@ -39,7 +39,7 @@ const BotMessage = ({ response, index, loader, responses }) => {
                     </div>
                     {(loader && index == responses.length - 1) &&
 
-                        <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4'>
+                        <div className='flex gap-2 absolute left-0 top-[60px] min-w-2/4 pb-5'>
                             <div className='bg-white rounded-full self-end p-1 h-8 w-8'>
                                 <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />
                             </div>
