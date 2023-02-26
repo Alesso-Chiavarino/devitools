@@ -6,7 +6,7 @@ const BotMessage = ({ response, index, loader, responses }) => {
 
     return (
         <li className={index % 2 === 0 ? 'flex gap-2 relative' : 'relative flex items-center gap-2 justify-end'}>
-            <div className={index % 2 === 0 && 'bg-white rounded-full self-end h-8 w-8 p-1'}>
+            <div className={index % 2 === 0 ? 'bg-white rounded-full self-end h-8 w-8 p-1' : null}>
                 {index % 2 === 0 && <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />}
             </div>
             {index % 2 === 0 ? (
@@ -44,7 +44,7 @@ const BotMessage = ({ response, index, loader, responses }) => {
                                 <img src="https://res.cloudinary.com/dotaebdx8/image/upload/v1677344246/Things/chatbot-icon_dfy22m.svg" className='w-full h-full object-cover' alt="" />
                             </div>
                             <div className='bg-gray-800 rounded-t-md rounded-br-md flex justify-center items-center p-2 w-[80px] pl-8'>
-                                <span class={styles.loader}></span>
+                                <span className={styles.loader}></span>
                             </div>
                         </div>
                     }

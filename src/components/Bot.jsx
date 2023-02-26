@@ -189,7 +189,7 @@ const Bot = ({ setIsShow, isShow }) => {
                     </ul>
 
                     <div className="border-t-[1px] border-gray-200 py-2 flex items-center">
-                        <input defaultValue={prompt} value={prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white placeholder:text-gray-300 px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
+                        <input value={prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white placeholder:text-gray-300 px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
                         <IoSend className='hover:text-white mx-2 text-gray-300 cursor-pointer text-xl' onClick={() => {
                             fetchCohere(prompt)
                         }}></IoSend>
