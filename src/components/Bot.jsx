@@ -163,7 +163,7 @@ const Bot = ({ setIsShow, isShow }) => {
     }
 
     return (
-        <div style={{ animationDuration: '.3s' }} className={isShow ? 'bg-[rgba(0,0,0,.97)] animate__animated animate__fadeInUp max-[800px]:w-3/4 max-[1200px]:w-2/4 lg:w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-4 z-50 right-4' : 'bg-black animate__animated animate__fadeOutDown w-1/4 rounded-md overflow-hidden h-fit fixed border-2 border-white bottom-0 z-50 right-4'}>
+        <div style={{ animationDuration: '.2s' }} className={isShow ? 'bg-[rgba(0,0,0,.97)] animate__animated animate__fadeInUp max-[800px]:w-3/4 max-[1200px]:w-2/4 lg:w-1/4 rounded-3xl overflow-hidden h-fit fixed border-2 border-white bottom-20 z-50 right-4' : 'bg-black animate__animated animate__fadeOutDown w-1/4 rounded-3xl overflow-hidden h-fit fixed border-2 border-white bottom-0 z-50 right-4'}>
 
             <form action="" onSubmit={(e) => handleSubmit(e)}>
                 <div className='bg-gradient-to-r from-violet-400 to-blue-400 flex items-center gap-5'>
