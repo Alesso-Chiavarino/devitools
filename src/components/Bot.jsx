@@ -18,7 +18,10 @@ const Bot = ({ setIsShow, isShow }) => {
         try {
             setLoader(true)
             handleResponsesState([...responses, input])
-            handlePromptState('')
+            handlePromptState({
+                prompt: '',
+                date: ''
+            })
 
             const data = {
 
@@ -100,7 +103,7 @@ const Bot = ({ setIsShow, isShow }) => {
             Pregunta: ¿Que podes hacer?
             Respuesta: Puedo ayudarte a encontrar la herramienta ideal que necesitas.
             --
-            Pregunta: ${input}
+            Pregunta: ${input.prompt}
             Respuesta:`,
                 truncate: 'END',
                 temperature: 0.3,
@@ -132,9 +135,15 @@ const Bot = ({ setIsShow, isShow }) => {
             if (newText === '') {
                 return console.log('No te entendí, por favor, intenta de nuevo.')
             }
-            handleResponseState(newText)
 
-            handleResponsesState([...responses, input, newText])
+            const finalText = {
+                text: newText,
+                time: new Date().toLocaleTimeString().slice(0, 5)
+            }
+
+            handleResponseState(finalText)
+
+            handleResponsesState([...responses, input, finalText])
         }
         catch (err) {
             console.log(err)
@@ -144,7 +153,10 @@ const Bot = ({ setIsShow, isShow }) => {
         }
     }
     const handleChange = (e) => {
-        handlePromptState(e.target.value)
+        handlePromptState({
+            prompt: e.target.value,
+            date: new Date().toLocaleTimeString().slice(0, 5)
+        })
     }
 
     useEffect(() => {
@@ -189,7 +201,7 @@ const Bot = ({ setIsShow, isShow }) => {
                     </ul>
 
                     <div className="border-t-[1px] border-gray-200 py-2 flex items-center">
-                        <input value={prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white placeholder:text-gray-300 px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
+                        <input value={prompt.prompt} type="text" onChange={(e) => handleChange(e)} id="rounded-email" className="text-white placeholder:text-gray-300 px-5 w-full bg-transparent outline-none" placeholder="Write a message" />
                         <IoSend className='hover:text-white mx-2 text-gray-300 cursor-pointer text-xl' onClick={() => {
                             fetchCohere(prompt)
                         }}></IoSend>

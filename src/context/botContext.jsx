@@ -8,8 +8,14 @@ export const useBot = () => {
 
 const BotProvider = ({ children }) => {
 
-    const [prompt, setPrompt] = useState('')
-    const [response, setResponse] = useState('Hola, bienvenido a devitools!, ¿en que te puedo ayudar? ')
+    const [prompt, setPrompt] = useState({
+        prompt: '',
+        date: ''
+    })
+    const [response, setResponse] = useState({
+        text: 'Hola, bienvenido a devitools!, ¿en que te puedo ayudar?',
+        date: ''
+    })
     const [responses, setResponses] = useState([])
 
     const handlePromptState = (value) => {
@@ -23,7 +29,6 @@ const BotProvider = ({ children }) => {
     const handleResponsesState = (value) => {
         setResponses(value)
     }
-
 
     return (
         <BotContext.Provider value={{ prompt, response, responses, handlePromptState, handleResponseState, handleResponsesState }}>
