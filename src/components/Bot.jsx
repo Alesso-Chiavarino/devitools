@@ -136,9 +136,15 @@ const Bot = ({ setIsShow, isShow }) => {
                 return console.log('No te entendí, por favor, intenta de nuevo.')
             }
 
+            let date = new Date().toLocaleTimeString().slice(0, 5)
+
+            if (date.length === 5) {
+                date = '0'.concat(date).slice(0, 5)
+            }
+
             const finalText = {
                 text: newText,
-                time: new Date().toLocaleTimeString().slice(0, 5)
+                time: date
             }
 
             handleResponseState(finalText)
@@ -153,9 +159,22 @@ const Bot = ({ setIsShow, isShow }) => {
         }
     }
     const handleChange = (e) => {
+
+        let date = new Date().toLocaleTimeString().slice(0, 5)
+
+        if (date.length === 5) {
+            const newDate = '0'.concat(date).slice(0, 5)
+
+            handlePromptState({
+                prompt: e.target.value,
+                date: newDate
+            })
+            return;
+        }
+
         handlePromptState({
             prompt: e.target.value,
-            date: new Date().toLocaleTimeString().slice(0, 5)
+            date: date
         })
     }
 
