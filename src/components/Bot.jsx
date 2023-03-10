@@ -28,9 +28,6 @@ const Bot = ({ setIsShow, isShow }) => {
                 model: 'xlarge',
                 prompt: `Esto es un bot que te guiará para encontrar la herramienta que necesitas.
             --
-            Pregunta: ¿Que es este sitio web?
-            Respuesta: Devitools te permitirá ayudarte en el desarrollo de tu sitio web, ofreciendote las mejores herramientas del mercado.
-            --
             Pregunta: ¿Dónde puedo encontrar fondos de pantalla para mi sitio web?
             Respuesta: Puedes encontrar fondos de pantalla en la sección Backgrounds de nuestra página web.
             --
