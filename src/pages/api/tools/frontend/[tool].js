@@ -512,6 +512,14 @@ const toolKits = {
         },
         {
             "type": "EXTENSIONS",
+            "name": "awesome screenshot",
+            "description": "awesomescreenshot is a free browser extension for Mozilla Firefox, Google Chrome, and Internet Explorer that allows you to get a screenshot from any point in your browser.",
+            "url": "https://chrome.google.com/webstore/detail/awesome-screenshot-and-sc/nlipoenfbbikpbjkfpfillcgkoblgpmj/related?hl=es",
+            "img": "/img/sites/frontend/extensions/Impresionante-captura-de-pantalla.png",
+            "recommended": true
+        },
+        {
+            "type": "EXTENSIONS",
             "name": "colorzilla",
             "description": "ColorZilla is a free browser extension for Mozilla Firefox, Google Chrome, and Internet Explorer that allows you to get a color reading from any point in your browser, quickly adjust this color and paste it into another program.",
             "url": "https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp",
